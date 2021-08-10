@@ -9,6 +9,6 @@
 
 ## Unity与Android交互-扩展Unity的MainActivity
 1. [Unity与Android交互](https://blog.csdn.net/jiaxunnanling/article/details/90201312)
-2. 2019之后的找不到UnityPlayerActivity 将其与mainActivity.java放到一个目录下，不然mainActivity找不到ta)
-3. [使用aar包扩展ManiActivity](https://blog.csdn.net/weixin_43126155/article/details/87220309)
+2. 2019之后的找不到UnityPlayerActivity 暂时找的2018的库代替
+3. [使用aar包扩展ManiActivity](https://blog.csdn.net/weixin_43126155/article/details/87220309) 注意检查aar的包名要和库的名字一致 label:name 一定要删除不然会冲突
 4. [android.enableR8](https://blog.csdn.net/weixin_42304838/article/details/117550474)

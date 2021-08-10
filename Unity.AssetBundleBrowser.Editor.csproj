@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{426ea7cc-d5e9-bf4c-3222-f488c499dcf3}</ProjectGuid>
+    <ProjectGuid>{90733b67-72b1-90af-4804-9c1535cc823d}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <AssemblyName>Unity.AssetBundleBrowser.Editor</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -36,12 +36,26 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\PackTool\Scripts\Editor\EditorChannel.cs" />
-     <Compile Include="Assets\PackTool\Scripts\Editor\PackageTool.cs" />
-     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Editor\ReporterEditor.cs" />
-     <Compile Include="Assets\Editor\ReferenceFinder\ReferenceFinder\AssetTreeView.cs" />
-     <Compile Include="Assets\Editor\ReferenceFinder\ReferenceFinder\ReferenceFinderData.cs" />
-     <Compile Include="Assets\Editor\ReferenceFinder\ReferenceFinder\ReferenceFinderWindow.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetListTree.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleDataSource\ABDataSourceProvider.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleTree.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\InspectTab\AssetBundleRecord.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleBrowserMain.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\InspectTab\InspectTreeView.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleDataSource\AssetDatabaseABDataSource.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\InspectTab\AssetBundleInspectTab.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleManageTab.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleModel\ABModelAssetInfo.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\ExportAssetBundles.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleDataSource\ABDataSource.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleModel\ABModelBundleInfo.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\MessageList.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\InspectTab\InspectSingleBundle.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\MessageSystem.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\BundleDetailList.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleBuildTab.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleModel\ABModel.cs" />
+     <None Include="Assets\Editor\AssetBundle\Unity.AssetBundleBrowser.Editor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -621,49 +635,20 @@
     <Reference Include="System.Xml.XPath.XDocument">
         <HintPath>D:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+        <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+        <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.TestRunner">
         <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
         <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-        <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-        <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-        <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-        <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-        <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-        <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-        <HintPath>E:/Unity/Unity3D/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{91e41472-9dee-06b9-a42d-2f3ea3dcd8fe}</Project>
-      <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AssetBundleBrowser.Editor.csproj">
-      <Project>{90733b67-72b1-90af-4804-9c1535cc823d}</Project>
-      <Name>Unity.AssetBundleBrowser.Editor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -37,9 +37,15 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\PackTool\Scripts\DateType.cs" />
-     <Compile Include="Assets\Scripts\AndroidToUnity.cs" />
      <Compile Include="Assets\PackTool\Scripts\ChannelConfig.cs" />
      <Compile Include="Assets\Scripts\AndroidLib\FPS.cs" />
+     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Test\TestReporter.cs" />
+     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\ReporterGUI.cs" />
+     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Reporter.cs" />
+     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\ReporterMessageReceiver.cs" />
+     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Test\Rotate.cs" />
+     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\MultiKeyDictionary.cs" />
+     <None Include="Assets\StreamingAssets\build_info.txt" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

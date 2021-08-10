@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\PackTool\Scripts\Editor\EditorChannel.cs" />
      <Compile Include="Assets\PackTool\Scripts\Editor\PackageTool.cs" />
+     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Editor\ReporterEditor.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

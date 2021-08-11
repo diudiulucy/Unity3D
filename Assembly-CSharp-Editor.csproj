@@ -36,12 +36,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\ReferenceFinder\ReferenceFinder\AssetTreeView.cs" />
+     <Compile Include="Assets\Editor\ReferenceFinder\ReferenceFinder\ReferenceFinderWindow.cs" />
+     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Editor\ReporterEditor.cs" />
      <Compile Include="Assets\PackTool\Scripts\Editor\EditorChannel.cs" />
      <Compile Include="Assets\PackTool\Scripts\Editor\PackageTool.cs" />
-     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Editor\ReporterEditor.cs" />
-     <Compile Include="Assets\Editor\ReferenceFinder\ReferenceFinder\AssetTreeView.cs" />
      <Compile Include="Assets\Editor\ReferenceFinder\ReferenceFinder\ReferenceFinderData.cs" />
-     <Compile Include="Assets\Editor\ReferenceFinder\ReferenceFinder\ReferenceFinderWindow.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

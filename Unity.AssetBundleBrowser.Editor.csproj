@@ -36,25 +36,25 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\AssetBundle\AssetListTree.cs" />
      <Compile Include="Assets\Editor\AssetBundle\AssetBundleDataSource\ABDataSourceProvider.cs" />
-     <Compile Include="Assets\Editor\AssetBundle\AssetBundleTree.cs" />
-     <Compile Include="Assets\Editor\AssetBundle\InspectTab\AssetBundleRecord.cs" />
      <Compile Include="Assets\Editor\AssetBundle\AssetBundleBrowserMain.cs" />
-     <Compile Include="Assets\Editor\AssetBundle\InspectTab\InspectTreeView.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleTree.cs" />
      <Compile Include="Assets\Editor\AssetBundle\AssetBundleDataSource\AssetDatabaseABDataSource.cs" />
      <Compile Include="Assets\Editor\AssetBundle\InspectTab\AssetBundleInspectTab.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\InspectTab\InspectTreeView.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetListTree.cs" />
      <Compile Include="Assets\Editor\AssetBundle\AssetBundleManageTab.cs" />
      <Compile Include="Assets\Editor\AssetBundle\AssetBundleModel\ABModelAssetInfo.cs" />
-     <Compile Include="Assets\Editor\AssetBundle\ExportAssetBundles.cs" />
-     <Compile Include="Assets\Editor\AssetBundle\AssetBundleDataSource\ABDataSource.cs" />
-     <Compile Include="Assets\Editor\AssetBundle\AssetBundleModel\ABModelBundleInfo.cs" />
-     <Compile Include="Assets\Editor\AssetBundle\MessageList.cs" />
      <Compile Include="Assets\Editor\AssetBundle\InspectTab\InspectSingleBundle.cs" />
-     <Compile Include="Assets\Editor\AssetBundle\MessageSystem.cs" />
      <Compile Include="Assets\Editor\AssetBundle\BundleDetailList.cs" />
-     <Compile Include="Assets\Editor\AssetBundle\AssetBundleBuildTab.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\MessageList.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\MessageSystem.cs" />
      <Compile Include="Assets\Editor\AssetBundle\AssetBundleModel\ABModel.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleModel\ABModelBundleInfo.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\InspectTab\AssetBundleRecord.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleDataSource\ABDataSource.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\ExportAssetBundles.cs" />
+     <Compile Include="Assets\Editor\AssetBundle\AssetBundleBuildTab.cs" />
      <None Include="Assets\Editor\AssetBundle\Unity.AssetBundleBrowser.Editor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

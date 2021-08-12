@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     float m_shootTimer = 0;
     public float attackDis = 100; 
     public int attack = 1;
+
+    public JoyStick myjoyStick;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,27 +59,7 @@ public class Player : MonoBehaviour
 
         m_transform.eulerAngles = camrot;
 
-        float xm = 0, ym = 0, zm = 0;
-        // ym -= m_gravity * Time.deltaTime;
-        if (Input.GetKey(KeyCode.W))
-        {
-            zm += m_movSpeed * Time.deltaTime;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            zm -= m_movSpeed * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            xm -= m_movSpeed * Time.deltaTime;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            xm += m_movSpeed * Time.deltaTime;
-        }
-
-        m_ch.Move(m_transform.TransformDirection(new Vector3(xm, ym, zm)));
+        m_ch.Move(new Vector3(myjoyStick.input.x, 0, myjoyStick.input.y)*Time.deltaTime*m_movSpeed);
 
         Vector3 pos = m_transform.position;
         pos.y += m_camHeight;

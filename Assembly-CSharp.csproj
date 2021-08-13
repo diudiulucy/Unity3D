@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\AndroidLib\FPS.cs" />
      <Compile Include="Assets\Scripts\Util\JoyStick.cs" />
      <Compile Include="Assets\Scripts\Util\ScrollCircle.cs" />
+     <Compile Include="Assets\Scripts\GameCore\EnemySpawn.cs" />
      <None Include="Assets\StreamingAssets\build_info.txt" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

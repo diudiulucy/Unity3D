@@ -20,6 +20,14 @@ public class Enemy : MonoBehaviour
 
     public float attackDistance = 1.5f;
     public int attack = 1;
+    //生成点
+    protected EnemySpawn m_spawn;
+
+    public void Init(EnemySpawn spawn){
+        m_spawn = spawn;
+        m_spawn.m_enemyCount++;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -133,11 +141,12 @@ public class Enemy : MonoBehaviour
         {
             if (stateInfo.normalizedTime >= 1.0f)
             {
+                //更新敌人计数
+                // m_spawn.m_enemyCount--;
                 //加分
                 GameManager.Instance.SetScore(100);
                 Destroy(this.gameObject);
             }
         }
-
     }
 }

@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     float m_gravity = 2.0f;
     float m_movSpeed = 3.0f;
     float m_shootTimer = 0;
-    public float attackDis = 100; 
+    public float attackDis = 100;
     public int attack = 1;
 
     public JoyStick myjoyStick;
@@ -48,19 +48,24 @@ public class Player : MonoBehaviour
 
     void Control()
     {
-        float rh = Input.GetAxis("Mouse X");
-        float rv = Input.GetAxis("Mouse Y");
-        m_camRot.x -= rv;
-        m_camRot.y += rh;
-        m_camTransform.eulerAngles = m_camRot;
 
-        Vector3 camrot = m_camTransform.eulerAngles;
-        camrot.x = 0; camrot.z = 0;
+        if (Input.GetMouseButton(0))
+        {
+            if (Input.mousePosition.x > Screen.width / 2)//右半边 才旋转角度
+            {
+                float rh = Input.GetAxis("Mouse X");
+                float rv = Input.GetAxis("Mouse Y");
+                m_camRot.x -= rv;
+                m_camRot.y += rh;
+                m_camTransform.eulerAngles = m_camRot;
 
-        m_transform.eulerAngles = camrot;
+                Vector3 camrot = m_camTransform.eulerAngles;
+                camrot.x = 0; camrot.z = 0;
 
-        m_ch.Move(new Vector3(myjoyStick.input.x, 0, myjoyStick.input.y)*Time.deltaTime*m_movSpeed);
-
+                m_transform.eulerAngles = camrot;
+            }   
+        }
+        m_ch.Move(new Vector3(myjoyStick.input.x, 0, myjoyStick.input.y) * Time.deltaTime * m_movSpeed);
         Vector3 pos = m_transform.position;
         pos.y += m_camHeight;
         m_camTransform.position = pos;

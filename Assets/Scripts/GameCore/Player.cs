@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
                 m_transform.eulerAngles = camrot;
             }   
         }
-        m_ch.Move(new Vector3(myjoyStick.input.x, 0, myjoyStick.input.y) * Time.deltaTime * m_movSpeed);
+        m_ch.Move(new Vector3(-myjoyStick.input.y, 0, myjoyStick.input.x) * Time.deltaTime * m_movSpeed);
         Vector3 pos = m_transform.position;
         pos.y += m_camHeight;
         m_camTransform.position = pos;
